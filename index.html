@@ -26,7 +26,7 @@
         var tillDate = new Date("July 21,2017 00:00:00").getTime();
         var toDay = new Date().getTime();
         var diff = tillDate - toDay;
-        //var days = Math.floor(diff/(1000*60*60*24));
+        var days = Math.floor(diff/(1000*60*60*24));
         var hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
         var mins = Math.floor((diff%(1000*60*60))/(1000*60));
         var sec = Math.floor((diff%(1000*60))/1000);
