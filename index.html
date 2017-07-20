@@ -23,7 +23,7 @@
 <script>
     var t = setInterval(myTimer,1000);
     function myTimer(){
-        var tillDate = new Date("June 29,2017 09:59:59").getTime();
+        var tillDate = new Date("July 21,2017 00:00:00").getTime();
         var toDay = new Date().getTime();
         var diff = tillDate - toDay;
         var days = Math.floor(diff/(1000*60*60*24));
@@ -37,7 +37,7 @@
         document.getElementById("show").innerHTML= days + "d " + hours + "h " + mins + "m " + sec + "s ";
         if(diff<0){
             clearInterval(t);
-            document.getElementById("show").innerHTML = "HAPPY BIRTHDAY";
+            document.getElementById("show").innerHTML = "HAPPY BIRTHDAY BABY....LOVE YOU SOOO VERYY MUCH!!!!!";
         }
     }
     function checkTime(x) {
