@@ -1,1 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>TIMER</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 120px;
+            font-family: "Fira Code Retina" ;
+            font-style: oblique;
+            color: darkblue;
+        }
+        body{
+            background-image: url('http://www.animatedimages.org/data/media/49/animated-birthday-image-0015.gif');
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+<p id = "show" ></p>
+
+<script>
+    var t = setInterval(myTimer,1000);
+    function myTimer(){
+        var tillDate = new Date("June 29,2017 09:59:59").getTime();
+        var toDay = new Date().getTime();
+        var diff = tillDate - toDay;
+        var days = Math.floor(diff/(1000*60*60*24));
+        var hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+        var mins = Math.floor((diff%(1000*60*60))/(1000*60));
+        var sec = Math.floor((diff%(1000*60))/1000);
+        days = checkTime(days);
+        hours = checkTime(hours);
+        mins = checkTime(mins);
+        sec = checkTime(sec);
+        document.getElementById("show").innerHTML= days + "d " + hours + "h " + mins + "m " + sec + "s ";
+        if(diff<0){
+            clearInterval(t);
+            document.getElementById("show").innerHTML = "HAPPY BIRTHDAY";
+        }
+    }
+    function checkTime(x) {
+        if (x < 10) {x = "0" + x};  // adding zero in front of numbers if < 10
+        return x;
+    }
+</script>
+</body>
+</html>
 
